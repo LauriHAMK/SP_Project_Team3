@@ -1,6 +1,7 @@
 package app;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,6 +19,7 @@ import dao.dao;
     urlPatterns = {"/adminlogin"}
 )
 public class AdminLogin extends HttpServlet {
+	static final String NEW_HOST = "index.html";
 
 	  @Override
 	  public void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -49,6 +51,14 @@ public class AdminLogin extends HttpServlet {
 		  		HttpSession session = request.getSession();
 		  		
 		  		session.setAttribute("LoggedUser", uname);
+		  		
+		  	    String newLocation = NEW_HOST;
+
+		  	    PrintWriter out = response.getWriter();
+		  	    response.setHeader("Refresh", "10; URL=" + newLocation);
+
+		  	    out.println("please wait");
+		  	    out.println("Your browser will forward you in 5 seconds.");
 		  		
 		  	} else {
 		  		response.getWriter().println("Login failed");
