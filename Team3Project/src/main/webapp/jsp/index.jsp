@@ -28,7 +28,7 @@
                     <li><a href="index.jsp" class="active">HOME</a></li>
                     <li><a href="">LINK2</a></li>
                     <li><a href="">LINK3</a></li>
-                    <li><a href="register.html">SIGN UP</a></li>
+                    <li><a href="register.jsp">SIGN UP</a></li>
                     <li ><a href="">LINK5</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
