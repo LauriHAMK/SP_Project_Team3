@@ -27,7 +27,7 @@
             <div id="menu-items">
                     <li><a href="index.jsp" class="active">HOME</a></li>
                     <li><a href="">LINK2</a></li>
-                    <li><a href="">LINK3</a></li>
+                    <li><a href="login.jsp">LOG IN</a></li>
                     <li><a href="register.jsp">SIGN UP</a></li>
                     <li ><a href="">LINK5</a></li>
                     
