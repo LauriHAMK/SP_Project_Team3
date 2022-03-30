@@ -31,7 +31,7 @@ public class ShowCandidates extends HttpServlet {
 		
 		session.setAttribute("allcandidates", candidates);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("showallcandidates.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("jsp/showallcandidates.jsp");
 		rd.forward(request, response);
 	
 	}
