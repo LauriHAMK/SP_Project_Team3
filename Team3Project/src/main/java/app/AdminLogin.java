@@ -19,13 +19,13 @@ import dao.dao;
     urlPatterns = {"/adminlogin"}
 )
 public class AdminLogin extends HttpServlet {
-	static final String NEW_HOST = "index.html";
+	static final String NEW_HOST = "jsp/index.jsp";
 
 	  @Override
 	  public void doGet(HttpServletRequest request, HttpServletResponse response) 
 	      throws IOException, ServletException {
 
-	    response.sendRedirect("index.html");
+	    response.sendRedirect("jsp/index.jsp");
 
 	  }
 	  @Override

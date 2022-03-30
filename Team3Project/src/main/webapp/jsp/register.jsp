@@ -26,10 +26,10 @@
         <ul>
             <li class="logo"> <a class="logoA"><img class="logoImg" src="./kuvat/voteIcon.png" alt="LOGO" style="height: 100%; width: 2.3vw; float: left; margin-right: 0.5vw; ">LOGO</a></li>
             <div id="menu-items">
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.jsp">HOME</a></li>
                     <li><a href="">LINK2</a></li>
                     <li><a href="">LINK3</a></li>
-                    <li><a href="register.html" class="active">SIGN UP</a></li>
+                    <li><a href="register.jsp" class="active">SIGN UP</a></li>
                     <li ><a href="">LINK5</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -48,27 +48,23 @@
                 <h1>Sign up</h1>
                 <div class="container">
                 <div class="sign-up-content">
-                <form method="POST" class="signup-form">
+                <form action="/addadmin" method="post" class="signup-form">
                 <h2 class="form-title">What type of user are you ?</h2>
                 <div class="form-radio">
-                <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" />
-                <label for="newbie">User</label>
-                <input type="radio" name="member_level" value="average" id="average" />
-                <label for="average">Candinate</label>
+<!--                 <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" /> -->
+<!--                 <label for="newbie">User</label> -->
+<!--                 <input type="radio" name="member_level" value="average" id="average" /> -->
+<!--                 <label for="average">Candinate</label> -->
                 <input type="radio" name="member_level" value="master" id="master" />
                 <label for="master">Admin</label>
                 </div>
                 <div class="form-textbox">
-                <label for="name">Full name:</label>
-                <input type="text" name="name" id="name" />
-                </div>
-                <div class="form-textbox">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" />
+                <label for="name">Username:</label>
+                <input type="text" name="username" id="name" />
                 </div>
                 <div class="form-textbox">
                 <label for="pass">Password:</label>
-                <input type="password" name="pass" id="pass" />
+                <input type="password" name="password" id="pass" />
                 </div>
                 <div class="form-group">
                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
@@ -79,7 +75,7 @@
                 </div>
                 </form>
                 <p class="loginhere" style="color: white;">
-                Already have an account ?<a href="#" class="loginhere-link"> Log in</a>
+                Already have an account ?<a href="adminlog.jsp" class="loginhere-link"> Log in</a>
                 </p>
                 </div>
                 </div>

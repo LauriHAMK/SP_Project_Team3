@@ -16,10 +16,7 @@ import app.security.SecurityUtils;
 import dao.dao;
 
 
-/*
- * The name of the servlet is AddGame
- * and the servlet's URI (url-pattern) is 'addgame'
- */
+
 @WebServlet(
     name = "CheckLoggedUser",
     urlPatterns = {"/checkloggeduser"}
