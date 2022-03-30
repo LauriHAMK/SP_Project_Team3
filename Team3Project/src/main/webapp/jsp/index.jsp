@@ -30,6 +30,8 @@
                     <li><a href="">LINK3</a></li>
                     <li><a href="register.jsp">SIGN UP</a></li>
                     <li ><a href="">LINK5</a></li>
+                    
+                    
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i id="showhide" class="fa fa-bars" onclick="changeclass();"></i>
