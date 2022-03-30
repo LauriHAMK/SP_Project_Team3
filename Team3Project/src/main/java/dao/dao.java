@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import app.Candidate;
+
 
 
 public class dao {
@@ -14,7 +16,7 @@ public class dao {
 	public dao() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			conn=java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/vaalikone", "lauri", "password");
+			conn=java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/vaalikone", "appuser", "kukkuu");
 		} catch (SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -29,7 +31,7 @@ public class dao {
 		}
 	}
 	
-	public void addUser(String username, String pw, String salt) {
+	public void addAdmin(String username, String pw, String salt) {
 		String sql = "insert into adminaccount (username, hashedpassword, salt) values(?,?,?)";
 		try {
 			PreparedStatement stmt = conn.prepareStatement(sql);
@@ -76,5 +78,29 @@ public class dao {
 			e.printStackTrace();
 		}
 		return result;
+	}
+	
+	public ArrayList<Candidate> readAllCandidates() {
+		ArrayList<Candidate> list = new ArrayList<>();
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet RS = stmt.executeQuery("select * from ehdokkaat");
+			while (RS.next()) {
+				Candidate candidate = new Candidate();
+				candidate.setEhdokas_id(RS.getInt("ehdokas_id"));
+				candidate.setSukunimi(RS.getString("sukunimi"));
+				candidate.setEtunimi(RS.getString("etunimi"));
+				candidate.setPuolue(RS.getString("puolue"));
+				candidate.setKotipaikkakunta(RS.getString("kotipaikkakunta"));
+				candidate.setIka(RS.getInt("ika"));
+				candidate.setMiksi_eduskuntaan(RS.getString("miksi_eduskuntaan"));
+				candidate.setMita_asioita_haluat_edistaa(RS.getString("mita_asioita_haluat_edistaa"));
+				candidate.setAmmatti(RS.getString("ammatti"));
+				list.add(candidate);
+			}
+			return list;
+		} catch (SQLException e) {
+			return null;
+		}
 	}
 }

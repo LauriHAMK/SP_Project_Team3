@@ -43,8 +43,11 @@ public class AddAdmin extends HttpServlet {
 	  	String salt = SecurityUtils.getSalt();
 	  	String hashpw = SecurityUtils.getPasswordHashed(password, salt);
 	  	
-	  	dao.addUser(uname, hashpw, salt);
-	  	
+	  	if (uname == "" && hashpw == "") {
+	  	dao.addAdmin(uname, hashpw, salt);
+	  	} else {
+	  		dao.close();
+	  	}
 	  	dao.close();
 		
 	  	response.sendRedirect("/jsp/index.jsp");
