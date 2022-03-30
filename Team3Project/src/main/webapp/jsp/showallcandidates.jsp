@@ -23,13 +23,13 @@
         ${candidate.puolue}<br>
         <b>Kotipaikkakunta:</b><br>
         ${candidate.kotipaikkakunta}<br>
-        <b>Ik‰:</b><br>
+        <b>Ik√§:</b><br>
         ${candidate.ika}<br>
         <b>Ammatti:</b><br>
         ${candidate.ammatti}<br>
         <b>Miksi haluat eduskuntaan?</b><br>
         ${candidate.miksi_eduskuntaan}<br>
-        <b>Mit‰ asioita haluat edist‰‰?</b><br>
+        <b>Mit√§ asioita haluat edist√§√§?</b><br>
         ${candidate.mita_asioita_haluat_edistaa}<br>
         <br><br>
 
