@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.dao;
+
 @WebServlet(
 		name = "ShowCandidates",
 		urlPatterns = {"/showcandidates"}
@@ -24,7 +26,7 @@ public class ShowCandidates extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		
-		Dao dao = new Dao();
+		dao dao = new dao();
 		ArrayList<Candidate> candidates = dao.readAllCandidates();
 		
 		session.setAttribute("allcandidates", candidates);

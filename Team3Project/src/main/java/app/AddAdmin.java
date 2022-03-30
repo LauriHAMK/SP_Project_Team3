@@ -43,7 +43,7 @@ public class AddAdmin extends HttpServlet {
 	  	String salt = SecurityUtils.getSalt();
 	  	String hashpw = SecurityUtils.getPasswordHashed(password, salt);
 	  	
-	  	dao.addUser(uname, hashpw, salt);
+	  	dao.addAdmin(uname, hashpw, salt);
 	  	
 	  	dao.close();
 		
