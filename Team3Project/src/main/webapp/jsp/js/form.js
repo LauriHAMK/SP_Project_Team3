@@ -15,8 +15,5 @@ jQuery(document).ready(function($) {
         else if (choice === 'master') {
             form.attr('action', '/addadmin');
         }
-        else {
-            form.attr('action', '/addadmin');
-        }
     });
 });

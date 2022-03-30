@@ -48,7 +48,7 @@
                 <h1>Sign up</h1>
                 <div class="container">
                 <div class="sign-up-content">
-                <form action="/addadmin" method="post" class="signup-form" name="form1" id="form1">
+                <form action="/adduser" method="post" class="signup-form" name="form1" id="form1">
                 <h2 class="form-title">What type of user are you ?</h2>
                 <div class="form-radio">
                 <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" />
