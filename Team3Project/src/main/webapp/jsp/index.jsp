@@ -16,9 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/ico" href="kuvat/favicon.ico">
 
-    <script src="jquery-3.5.1.min.js"></script>
-    <script src="scripts.js"></script>
-    <script src="navbar.js"></script>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/navbar.js"></script>
 </head>
 <body> 
     <div class="navbar">
@@ -60,8 +60,8 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijä">Sivun tekijä Juha Kärnä</h4>
-        <h4 class="copiright">© 2022 Juha Kärnä All rights reserved</h4>
+        <h4 class="tekijï¿½">Sivun tekijï¿½ Juha Kï¿½rnï¿½</h4>
+        <h4 class="copiright">ï¿½ 2022 Juha Kï¿½rnï¿½ All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 
