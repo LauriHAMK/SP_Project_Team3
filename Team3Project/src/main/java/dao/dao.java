@@ -8,8 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import app.Candidate;
-import app.questions;
 
+import app.questions;
 
 
 public class dao {
@@ -35,7 +35,6 @@ public class dao {
 	public void addAdmin(String username, String pw, String salt) {
 		String sql = "insert into adminaccount (username, hashedpassword, salt) values(?,?,?)";
 		try {
-			
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			
 			stmt.setString(1, username);
@@ -105,6 +104,7 @@ public class dao {
 			return null;
 		}
 	}
+
 	public ArrayList<questions> readAllquestions() {
 		ArrayList<questions> questions=new ArrayList<>();
 		Statement stmt=null;
