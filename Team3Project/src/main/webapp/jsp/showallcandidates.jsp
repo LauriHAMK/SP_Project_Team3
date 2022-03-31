@@ -37,7 +37,7 @@
                 <li><a href="jsp/index.jsp">Etusivu</a></li>
                 <li><a href="showcandidates" class="active">Kaikki ehdokkaat</a></li>
                 <li><a href="showquestions">Vastaa kysymyksiin</a></li>
-                <li><a href="jsp/register.jsp">Rekister�idy</a></li>
+                <li><a href="register.jsp">Rekister�idy</a></li>
                 <li><a href="">LINK5</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
