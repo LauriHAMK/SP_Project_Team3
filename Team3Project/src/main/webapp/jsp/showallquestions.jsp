@@ -18,6 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="jsp/style/home.css" />
     <link rel="stylesheet" type="text/css" href="jsp/style/candinates.css" />
+    <link rel="stylesheet" type="text/css" href="jsp/style/questions.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +37,7 @@
             <li><a href="jsp/index.jsp">Etusivu</a></li>
             <li><a href="showcandidates">Kaikki ehdokkaat</a></li>
             <li><a href="showquestions" class="active">Vastaa kysymyksiin</a></li>
-            <li><a href="jsp/register.jsp">Rekisterˆidy</a></li>
+            <li><a href="jsp/register.jsp">Rekister√∂idy</a></li>
             <li><a href="">LINK5</a></li>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -56,11 +57,11 @@
                     <div class="container">
                         <div class="sign-up-content">
                             <b>${question.id}: </b>${question.question} <br><br>
-                            <input type="radio" id="${question.id}1" name="${question.id}" value="1"><label for="${question.id}1"> 1. T‰ysin
-                                eri mielt‰</label><br> <input type="radio" id="${question.id}2" name="${question.id}" value="2"><label for="${question.id}2"> 2. Eri mielt‰</label>
+                            <input type="radio" id="${question.id}1" name="${question.id}" value="1"><label for="${question.id}1"> 1. T√§ysin
+                                eri mielt√§</label><br> <input type="radio" id="${question.id}2" name="${question.id}" value="2"><label for="${question.id}2"> 2. Eri mielt√§</label>
                             <br> <input type="radio" id="${question.id}3" name="${question.id}" value="3"> <label for="${question.id}3">3. Neutraali</label>
-                            <br> <input type="radio" id="${question.id}4" name="${question.id}" value="4"> <label for="${question.id}4">4. Samaa mielt‰</label>
-                            <br> <input type="radio" id="${question.id}5" name="${question.id}" value="5"><label for="${question.id}5"> 5. T‰ysin samaa mielt‰</label>
+                            <br> <input type="radio" id="${question.id}4" name="${question.id}" value="4"> <label for="${question.id}4">4. Samaa mielt√§</label>
+                            <br> <input type="radio" id="${question.id}5" name="${question.id}" value="5"><label for="${question.id}5"> 5. T√§ysin samaa mielt√§</label>
                             <br><br>
 
                         </div>
@@ -81,8 +82,8 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijÔøΩ">Sivun tekij‰ Lauri Jokinen, Miska Luukkonen, Juha K‰rn‰</h4>
-        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha K‰rn‰ All rights reserved</h4>
+        <h4 class="tekijÔøΩ">Sivun tekij√§ Lauri Jokinen, Miska Luukkonen, Juha K√§rn√§</h4>
+        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha K√§rn√§ All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 
