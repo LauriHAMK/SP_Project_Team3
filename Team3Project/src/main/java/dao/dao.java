@@ -8,9 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import app.Candidate;
-import app.questions;
 import app.Question;
-
 
 
 
@@ -37,7 +35,6 @@ public class dao {
 	public void addAdmin(String username, String pw, String salt) {
 		String sql = "insert into adminaccount (username, hashedpassword, salt) values(?,?,?)";
 		try {
-			
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			
 			stmt.setString(1, username);
@@ -107,91 +104,6 @@ public class dao {
 			return null;
 		}
 	}
-	public ArrayList<questions> readAllquestions() {
-		ArrayList<questions> questions=new ArrayList<>();
-		Statement stmt=null;
-		int count=0;
-		try {
-			stmt = conn.createStatement();
-			ResultSet rs=stmt.executeQuery("select * from KYSYMYKSET");
-			while (rs.next()) {
-				questions game=new questions();
-				game.setKysymys_id(rs.getInt("KYSYMYS_ID"));
-				game.setKysymys(rs.getString("KYSYMYS"));
-				questions.add(game);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return questions;
-	}
-	
-	public questions getGuestionInfo(int id) {
-		questions result = null;
-		String sql = "select * from KYSYMYKSET where KYSYMYS_ID = ?";
-		try {
-			PreparedStatement stmt = conn.prepareStatement(sql);
-						
-			stmt.setInt(1, id);
-			
-			ResultSet resultset = stmt.executeQuery();
-			
-			if (resultset.next()) {
-				result = new questions();
-				result.setKysymys_id(resultset.getInt("KYSYMYS_ID"));
-				result.setKysymys(resultset.getString("KYSYMYS"));
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return result;
-	}
-	
-	public int updateQuestion(questions question) {
-		int count = 0;
-		String sql = "update KYSYMYKSET set KYSYMYS_ID = ?, KYSYMYS = ? where KYSYMYS_ID = ?";
-		try {
-			PreparedStatement stmt = conn.prepareStatement(sql);
-			
-			stmt.setInt(1, question.getKysymys_id());
-			stmt.setString(2, question.getKysymys());
-			stmt.setInt(3, question.getKysymys_id());
-			
-			count = stmt.executeUpdate();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return count;
-	}
-	
-	public int deleteQuestion(questions question) {
-		int count = 0;
-		String sql = "DELETE FROM KYSYMYKSET WHERE KYSYMYS_ID = ?";
-		try {
-			PreparedStatement stmt = conn.prepareStatement(sql);
-			
-			stmt.setInt(1, question.getKysymys_id());
-
-			
-			count = stmt.executeUpdate();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return count;
-	}
-	public void createQuestion(questions question) {
-		try {
-			String sql = "insert into KYSYMYKSET (KYSYMYS) values (?)";
-			PreparedStatement preparedStmt = conn.prepareStatement(sql);
-			preparedStmt.setString(1, question.getKysymys());
-			preparedStmt.executeUpdate();
-
-		} catch (SQLException e) {
-    }
 	
 	public ArrayList<Question> readAllQuestions() {
 		ArrayList<Question> list = new ArrayList<>();
