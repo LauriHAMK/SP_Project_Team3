@@ -8,7 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import app.Candidate;
-import app.Question;
+
+import app.questions;
 
 
 
@@ -35,6 +36,7 @@ public class dao {
 	public void addAdmin(String username, String pw, String salt) {
 		String sql = "insert into adminaccount (username, hashedpassword, salt) values(?,?,?)";
 		try {
+			
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			
 			stmt.setString(1, username);
@@ -105,20 +107,24 @@ public class dao {
 		}
 	}
 	
-	public ArrayList<Question> readAllQuestions() {
-		ArrayList<Question> list = new ArrayList<>();
+	public ArrayList<questions> readAllquestions() {
+		ArrayList<questions> questions=new ArrayList<>();
+		Statement stmt=null;
+		int count=0;
 		try {
-			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from kysymykset");
+			stmt = conn.createStatement();
+			ResultSet rs=stmt.executeQuery("select * from KYSYMYKSET");
 			while (rs.next()) {
-				Question question = new Question();
-				question.setId(rs.getInt("kysymys_id"));
-				question.setQuestion(rs.getString("kysymys"));
-				list.add(question);
+				questions game=new questions();
+				game.setKysymys_id(rs.getInt("KYSYMYS_ID"));
+				game.setKysymys(rs.getString("KYSYMYS"));
+				questions.add(game);
 			}
-			return list;
 		} catch (SQLException e) {
-			return null;
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		return questions;
 	}
+
 }
