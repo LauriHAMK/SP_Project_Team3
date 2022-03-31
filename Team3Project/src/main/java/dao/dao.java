@@ -12,7 +12,6 @@ import app.questions;
 
 
 
-
 public class dao {
 	private static Connection conn;
 	public dao() {
@@ -182,5 +181,15 @@ public class dao {
 		}
 		return count;
 	}
-		
+	public void createQuestion(questions question) {
+		try {
+			String sql = "insert into KYSYMYKSET (KYSYMYS) values (?)";
+			PreparedStatement preparedStmt = conn.prepareStatement(sql);
+			preparedStmt.setString(1, question.getKysymys());
+			preparedStmt.executeUpdate();
+
+		} catch (SQLException e) {
+
+		}
+	}
 }

@@ -14,6 +14,8 @@
 </head>
 <body>
 
+<a href="jsp/addquestion.jsp">Add Question</a> 
+<br><br>
 
 <c:forEach var="questions" items="${sessionScope.allquestions}" >
 	<tr>
