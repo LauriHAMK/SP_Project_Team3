@@ -1,6 +1,7 @@
 package app;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -13,7 +14,10 @@ import javax.servlet.http.HttpSession;
 
 import dao.dao;
 
-@WebServlet("/showcandidates")
+@WebServlet(
+		name = "ShowCandidates",
+		urlPatterns = {"/showcandidates"}
+		)
 public class ShowCandidates extends HttpServlet {
 	
 	@Override
@@ -27,7 +31,7 @@ public class ShowCandidates extends HttpServlet {
 		
 		session.setAttribute("allcandidates", candidates);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("jsp/showallcandidates.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("showallcandidates.jsp");
 		rd.forward(request, response);
 	
 	}

@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 import app.Candidate;
 import app.questions;
-import app.Question;
-
 
 
 
@@ -88,18 +86,18 @@ public class dao {
 		ArrayList<Candidate> list = new ArrayList<>();
 		try {
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from ehdokkaat");
-			while (rs.next()) {
+			ResultSet RS = stmt.executeQuery("select * from ehdokkaat");
+			while (RS.next()) {
 				Candidate candidate = new Candidate();
-				candidate.setEhdokas_id(rs.getInt("ehdokas_id"));
-				candidate.setSukunimi(rs.getString("sukunimi"));
-				candidate.setEtunimi(rs.getString("etunimi"));
-				candidate.setPuolue(rs.getString("puolue"));
-				candidate.setKotipaikkakunta(rs.getString("kotipaikkakunta"));
-				candidate.setIka(rs.getInt("ika"));
-				candidate.setMiksi_eduskuntaan(rs.getString("miksi_eduskuntaan"));
-				candidate.setMita_asioita_haluat_edistaa(rs.getString("mita_asioita_haluat_edistaa"));
-				candidate.setAmmatti(rs.getString("ammatti"));
+				candidate.setEhdokas_id(RS.getInt("ehdokas_id"));
+				candidate.setSukunimi(RS.getString("sukunimi"));
+				candidate.setEtunimi(RS.getString("etunimi"));
+				candidate.setPuolue(RS.getString("puolue"));
+				candidate.setKotipaikkakunta(RS.getString("kotipaikkakunta"));
+				candidate.setIka(RS.getInt("ika"));
+				candidate.setMiksi_eduskuntaan(RS.getString("miksi_eduskuntaan"));
+				candidate.setMita_asioita_haluat_edistaa(RS.getString("mita_asioita_haluat_edistaa"));
+				candidate.setAmmatti(RS.getString("ammatti"));
 				list.add(candidate);
 			}
 			return list;
@@ -191,22 +189,7 @@ public class dao {
 			preparedStmt.executeUpdate();
 
 		} catch (SQLException e) {
-    }
-	
-	public ArrayList<Question> readAllQuestions() {
-		ArrayList<Question> list = new ArrayList<>();
-		try {
-			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from kysymykset");
-			while (rs.next()) {
-				Question question = new Question();
-				question.setId(rs.getInt("kysymys_id"));
-				question.setQuestion(rs.getString("kysymys"));
-				list.add(question);
-			}
-			return list;
-		} catch (SQLException e) {
-			return null;
+
 		}
 	}
 }
