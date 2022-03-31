@@ -16,19 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/ico" href="kuvat/favicon.ico">
 
-    <script src="./js/jquery-3.5.1.min.js"></script>
-    <script src="./js/form.js"></script>
-    <script src="./js/navbar.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="navbar.js"></script>
 </head>
 <body> 
     <div class="navbar">
         <ul>
             <li class="logo"> <a class="logoA"><img class="logoImg" src="./kuvat/voteIcon.png" alt="LOGO" style="height: 100%; width: 2.3vw; float: left; margin-right: 0.5vw; ">LOGO</a></li>
             <div id="menu-items">
-                    <li><a href="index.jsp" class="active">Etusivu</a></li>
-                    <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
-                    <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
-                    <li><a href="register.jsp">Rekisterï¿½idy</a></li>
+                    <li><a href="index.jsp" class="active">HOME</a></li>
+                    <li><a href="">LINK2</a></li>
+                    <li><a href="login.jsp">LOG IN</a></li>
+                    <li><a href="register.jsp">SIGN UP</a></li>
                     <li ><a href="">LINK5</a></li>
                     
                     
@@ -60,8 +60,8 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijï¿½">Sivun tekijï¿½ Lauri Jokinen, Miska Luukkonen, Juha KÃ¤rnÃ¤</h4>
-        <h4 class="copiright">ï¿½ 2022 Lauri Jokinen, Miska Luukkonen, Juha KÃ¤rnÃ¤ All rights reserved</h4>
+        <h4 class="tekijä">Sivun tekijä Juha Kärnä</h4>
+        <h4 class="copiright">© 2022 Juha Kärnä All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 
