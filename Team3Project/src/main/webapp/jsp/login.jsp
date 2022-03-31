@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,10 +26,10 @@
         <ul>
             <li class="logo"> <a class="logoA"><img class="logoImg" src="./kuvat/voteIcon.png" alt="LOGO" style="height: 100%; width: 2.3vw; float: left; margin-right: 0.5vw; ">LOGO</a></li>
             <div id="menu-items">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="">LINK2</a></li>
-                    <li><a href="">LINK3</a></li>
-                    <li><a href="register.html" class="active">SIGN UP</a></li>
+                    <li><a href="index.jsp">Etusivu</a></li>
+                    <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
+                    <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
+                    <li><a href="register.jsp" class="active">Rekisteröidy</a></li>
                     <li ><a href="">LINK5</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -43,41 +45,38 @@
          </div> -->
         <div class="signUp">
             <div class="main">
-                <h1>Sign up</h1>
+                <h1>Log In</h1>
                 <div class="container">
                 <div class="sign-up-content">
-                <form method="POST" class="signup-form">
-                <h2 class="form-title">What type of user are you ?</h2>
+               <form action="/adminlogin" method="post">
+               <h2 class="form-title">What type of user are you ?</h2>
                 <div class="form-radio">
-                <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" />
-                <label for="newbie">User</label>
-                <input type="radio" name="member_level" value="average" id="average" />
-                <label for="average">Candinate</label>
+<!--                 <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" /> -->
+<!--                 <label for="newbie">User</label> -->
+<!--                 <input type="radio" name="member_level" value="average" id="average" /> -->
+<!--                 <label for="average">Candinate</label> -->
                 <input type="radio" name="member_level" value="master" id="master" />
                 <label for="master">Admin</label>
                 </div>
-                <div class="form-textbox">
-                <label for="name">Full name:</label>
-                <input type="text" name="name" id="name" />
-                </div>
-                <div class="form-textbox">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" />
-                </div>
-                <div class="form-textbox">
-                <label for="pass">Password:</label>
-                <input type="password" name="pass" id="pass" />
-                </div>
+						    <div class="form-textbox">
+               				<label for="name">Username:</label>
+               				<input type="text" name="username" id="name" />
+                			</div>
+						    <div class="form-textbox">
+                			<label for="pass">Password:</label>
+                			<input type="password" name="password" id="pass" />
+                			</div>
+				
                 <div class="form-group">
                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                 <label for="agree-term" class="label-agree-term" style="color: white;"><span><span></span></span>I agree all statements in <a href="#" class="term-service">Terms of service</a></label>
                 </div>
                 <div class="form-textbox">
-                <input type="submit" name="submit" id="submit" class="submit" value="Create account" />
+                <input type="submit" name="submit" id="submit" class="submit" value="Log In" />
                 </div>
                 </form>
                 <p class="loginhere" style="color: white;">
-                Already have an account ?<a href="#" class="loginhere-link"> Log in</a>
+                Dont have Account ?<a href="register.jsp" class="loginhere-link"> Sign up</a>
                 </p>
                 </div>
                 </div>
@@ -93,11 +92,12 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijÃ¤">Sivun tekijÃ¤ Juha KÃ¤rnÃ¤</h4>
-        <h4 class="copiright">Â© 2022 Juha KÃ¤rnÃ¤ All rights reserved</h4>
+        <h4 class="tekijï¿½">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
+        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä¤ All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 
 
 </body>
 </html>
+	
