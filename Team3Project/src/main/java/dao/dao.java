@@ -8,12 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import app.Candidate;
-<<<<<<< HEAD
 import app.questions;
-=======
-import app.Question;
-
->>>>>>> parent of b1959cb (Merge pull request #8 from LauriHAMK/lauri)
 
 
 
@@ -91,18 +86,18 @@ public class dao {
 		ArrayList<Candidate> list = new ArrayList<>();
 		try {
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from ehdokkaat");
-			while (rs.next()) {
+			ResultSet RS = stmt.executeQuery("select * from ehdokkaat");
+			while (RS.next()) {
 				Candidate candidate = new Candidate();
-				candidate.setEhdokas_id(rs.getInt("ehdokas_id"));
-				candidate.setSukunimi(rs.getString("sukunimi"));
-				candidate.setEtunimi(rs.getString("etunimi"));
-				candidate.setPuolue(rs.getString("puolue"));
-				candidate.setKotipaikkakunta(rs.getString("kotipaikkakunta"));
-				candidate.setIka(rs.getInt("ika"));
-				candidate.setMiksi_eduskuntaan(rs.getString("miksi_eduskuntaan"));
-				candidate.setMita_asioita_haluat_edistaa(rs.getString("mita_asioita_haluat_edistaa"));
-				candidate.setAmmatti(rs.getString("ammatti"));
+				candidate.setEhdokas_id(RS.getInt("ehdokas_id"));
+				candidate.setSukunimi(RS.getString("sukunimi"));
+				candidate.setEtunimi(RS.getString("etunimi"));
+				candidate.setPuolue(RS.getString("puolue"));
+				candidate.setKotipaikkakunta(RS.getString("kotipaikkakunta"));
+				candidate.setIka(RS.getInt("ika"));
+				candidate.setMiksi_eduskuntaan(RS.getString("miksi_eduskuntaan"));
+				candidate.setMita_asioita_haluat_edistaa(RS.getString("mita_asioita_haluat_edistaa"));
+				candidate.setAmmatti(RS.getString("ammatti"));
 				list.add(candidate);
 			}
 			return list;
@@ -110,7 +105,6 @@ public class dao {
 			return null;
 		}
 	}
-<<<<<<< HEAD
 	public ArrayList<questions> readAllquestions() {
 		ArrayList<questions> questions=new ArrayList<>();
 		Statement stmt=null;
@@ -130,23 +124,72 @@ public class dao {
 		}
 		return questions;
 	}
-=======
->>>>>>> parent of b1959cb (Merge pull request #8 from LauriHAMK/lauri)
 	
-	public ArrayList<Question> readAllQuestions() {
-		ArrayList<Question> list = new ArrayList<>();
+	public questions getGuestionInfo(int id) {
+		questions result = null;
+		String sql = "select * from KYSYMYKSET where KYSYMYS_ID = ?";
 		try {
-			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from kysymykset");
-			while (rs.next()) {
-				Question question = new Question();
-				question.setId(rs.getInt("kysymys_id"));
-				question.setQuestion(rs.getString("kysymys"));
-				list.add(question);
+			PreparedStatement stmt = conn.prepareStatement(sql);
+						
+			stmt.setInt(1, id);
+			
+			ResultSet resultset = stmt.executeQuery();
+			
+			if (resultset.next()) {
+				result = new questions();
+				result.setKysymys_id(resultset.getInt("KYSYMYS_ID"));
+				result.setKysymys(resultset.getString("KYSYMYS"));
 			}
-			return list;
 		} catch (SQLException e) {
-			return null;
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public int updateQuestion(questions question) {
+		int count = 0;
+		String sql = "update KYSYMYKSET set KYSYMYS_ID = ?, KYSYMYS = ? where KYSYMYS_ID = ?";
+		try {
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			
+			stmt.setInt(1, question.getKysymys_id());
+			stmt.setString(2, question.getKysymys());
+			stmt.setInt(3, question.getKysymys_id());
+			
+			count = stmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return count;
+	}
+	
+	public int deleteQuestion(questions question) {
+		int count = 0;
+		String sql = "DELETE FROM KYSYMYKSET WHERE KYSYMYS_ID = ?";
+		try {
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			
+			stmt.setInt(1, question.getKysymys_id());
+
+			
+			count = stmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return count;
+	}
+	public void createQuestion(questions question) {
+		try {
+			String sql = "insert into KYSYMYKSET (KYSYMYS) values (?)";
+			PreparedStatement preparedStmt = conn.prepareStatement(sql);
+			preparedStmt.setString(1, question.getKysymys());
+			preparedStmt.executeUpdate();
+
+		} catch (SQLException e) {
+
 		}
 	}
 }
