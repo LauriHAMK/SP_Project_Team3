@@ -192,6 +192,7 @@ public class dao {
 
 		} catch (SQLException e) {
     }
+	}
 	
 	public ArrayList<Question> readAllQuestions() {
 		ArrayList<Question> list = new ArrayList<>();
