@@ -25,10 +25,10 @@
         <ul>
             <li class="logo"> <a class="logoA"><img class="logoImg" src="./kuvat/voteIcon.png" alt="LOGO" style="height: 100%; width: 2.3vw; float: left; margin-right: 0.5vw; ">LOGO</a></li>
             <div id="menu-items">
-                    <li><a href="index.jsp" class="active">HOME</a></li>
-                    <li><a href="">LINK2</a></li>
-                    <li><a href="login.jsp">LOG IN</a></li>
-                    <li><a href="register.jsp">SIGN UP</a></li>
+                    <li><a href="index.jsp" class="active">Etusivu</a></li>
+                    <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
+                    <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
+                    <li><a href="register.jsp">Rekisteröidy</a></li>
                     <li ><a href="">LINK5</a></li>
                     
                     
