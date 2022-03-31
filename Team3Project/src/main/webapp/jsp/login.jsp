@@ -26,10 +26,10 @@
         <ul>
             <li class="logo"> <a class="logoA"><img class="logoImg" src="./kuvat/voteIcon.png" alt="LOGO" style="height: 100%; width: 2.3vw; float: left; margin-right: 0.5vw; ">LOGO</a></li>
             <div id="menu-items">
-                    <li><a href="index.jsp">HOME</a></li>
-                    <li><a href="">LINK2</a></li>
-                    <li><a href="">LINK3</a></li>
-                    <li><a href="register.jsp" class="active">SIGN UP</a></li>
+                    <li><a href="index.jsp">Etusivu</a></li>
+                    <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
+                    <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
+                    <li><a href="register.jsp" class="active">Rekisteröidy</a></li>
                     <li ><a href="">LINK5</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -92,8 +92,8 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijä">Sivun tekijä Juha Kärnä</h4>
-        <h4 class="copiright">© 2022 Juha Kärnä All rights reserved</h4>
+        <h4 class="tekijï¿½">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
+        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä¤ All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 

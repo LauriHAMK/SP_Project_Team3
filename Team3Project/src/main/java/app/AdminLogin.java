@@ -19,7 +19,7 @@ import dao.dao;
     urlPatterns = {"/adminlogin"}
 )
 public class AdminLogin extends HttpServlet {
-	static final String NEW_HOST = "jsp/index.jsp";
+	static final String NEW_HOST = "jsp/yllapito.jsp";
 
 	  @Override
 	  public void doGet(HttpServletRequest request, HttpServletResponse response) 

@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import app.Candidate;
+import app.Question;
 import app.questions;
 
 
@@ -190,6 +191,24 @@ public class dao {
 
 		} catch (SQLException e) {
 
+		}
+	}
+
+	
+	public ArrayList<Question> readAllQuestions() {
+		ArrayList<Question> list = new ArrayList<>();
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("select * from kysymykset");
+			while (rs.next()) {
+				Question question = new Question();
+				question.setId(rs.getInt("kysymys_id"));
+				question.setQuestion(rs.getString("kysymys"));
+				list.add(question);
+			}
+			return list;
+		} catch (SQLException e) {
+			return null;
 		}
 	}
 }

@@ -17,19 +17,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/ico" href="kuvat/favicon.ico">
     <!-- scripts -->
-    <script src="jquery-3.5.1.min.js"></script>
-    <script src="scripts.js"></script>
-    <script src="navbar.js"></script>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/register.js"></script>
 </head>
 <body> 
     <div class="navbar">
         <ul>
             <li class="logo"> <a class="logoA"><img class="logoImg" src="./kuvat/voteIcon.png" alt="LOGO" style="height: 100%; width: 2.3vw; float: left; margin-right: 0.5vw; ">LOGO</a></li>
             <div id="menu-items">
-                    <li><a href="index.jsp">HOME</a></li>
-                    <li><a href="">LINK2</a></li>
-                    <li><a href="">LINK3</a></li>
-                    <li><a href="register.jsp" class="active">SIGN UP</a></li>
+                    <li><a href="index.jsp">Etusivu</a></li>
+                    <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
+                    <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
+                    <li><a href="register.jsp" class="active">Rekisteröidy</a></li>
                     <li ><a href="">LINK5</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -48,13 +49,13 @@
                 <h1>Sign up</h1>
                 <div class="container">
                 <div class="sign-up-content">
-                <form action="/addadmin" method="post" class="signup-form">
+                <form action="/adduser" method="post" onsubmit="return tarkasta(this)" class="signup-form" name="form1" id="form1">
                 <h2 class="form-title">What type of user are you ?</h2>
                 <div class="form-radio">
-<!--                 <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" /> -->
-<!--                 <label for="newbie">User</label> -->
-<!--                 <input type="radio" name="member_level" value="average" id="average" /> -->
-<!--                 <label for="average">Candinate</label> -->
+                <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" />
+                <label for="newbie">User</label>
+                <input type="radio" name="member_level" value="average" id="average" />
+                <label for="average">Candinate</label>
                 <input type="radio" name="member_level" value="master" id="master" />
                 <label for="master">Admin</label>
                 </div>
@@ -91,8 +92,8 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijä">Sivun tekijä Juha Kärnä</h4>
-        <h4 class="copiright">© 2022 Juha Kärnä All rights reserved</h4>
+        <h4 class="tekijï¿½">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
+        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 
