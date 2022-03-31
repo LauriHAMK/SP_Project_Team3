@@ -37,7 +37,7 @@
                 <li><a href="jsp/index.jsp">Etusivu</a></li>
                 <li><a href="showcandidates" class="active">Kaikki ehdokkaat</a></li>
                 <li><a href="showquestions">Vastaa kysymyksiin</a></li>
-                <li><a href="register.jsp">Rekisteröidy</a></li>
+                <li><a href="register.jsp">Rekisterï¿½idy</a></li>
                 <li><a href="">LINK5</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -57,13 +57,13 @@
                         ${candidate.puolue}<br><br>
                         <b>Kotipaikkakunta:</b><br>
                         ${candidate.kotipaikkakunta}<br><br>
-                        <b>Ikä:</b><br>
+                        <b>Ikï¿½:</b><br>
                         ${candidate.ika}<br><br>
                         <b>Ammatti:</b><br>
                         ${candidate.ammatti}<br><br>
                         <b>Miksi haluat eduskuntaan?</b><br>
                         ${candidate.miksi_eduskuntaan}<br><br>
-                        <b>Mitä asioita haluat edistää?</b><br>
+                        <b>Mitï¿½ asioita haluat edistï¿½ï¿½?</b><br>
                         ${candidate.mita_asioita_haluat_edistaa}<br><br>
                         <br><br>
 
@@ -84,8 +84,8 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijä">Sivun tekijä Juha Kärnä</h4>
-        <h4 class="copiright">© 2022 Juha Kärnä All rights reserved</h4>
+        <h4 class="tekijï¿½">Sivun tekijï¿½ Lauri Jokinen, Miska Luukkonen, Juha KÃ¤rnÃ¤</h4>
+        <h4 class="copiright">ï¿½ 2022 Lauri Jokinen, Miska Luukkonen, Juha KÃ¤rnÃ¤ All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 

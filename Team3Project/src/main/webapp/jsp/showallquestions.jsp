@@ -36,7 +36,7 @@
             <li><a href="jsp/index.jsp">Etusivu</a></li>
             <li><a href="showcandidates">Kaikki ehdokkaat</a></li>
             <li><a href="showquestions" class="active">Vastaa kysymyksiin</a></li>
-            <li><a href="jsp/register.jsp">Rekisteröidy</a></li>
+            <li><a href="jsp/register.jsp">Rekisterï¿½idy</a></li>
             <li><a href="">LINK5</a></li>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -56,11 +56,11 @@
                     <div class="container">
                         <div class="sign-up-content">
                             <b>${question.id}: </b>${question.question} <br><br>
-                            <input type="radio" id="${question.id}1" name="${question.id}" value="1"><label for="${question.id}1"> 1. Täysin
-                                eri mieltä</label><br> <input type="radio" id="${question.id}2" name="${question.id}" value="2"><label for="${question.id}2"> 2. Eri mieltä</label>
+                            <input type="radio" id="${question.id}1" name="${question.id}" value="1"><label for="${question.id}1"> 1. Tï¿½ysin
+                                eri mieltï¿½</label><br> <input type="radio" id="${question.id}2" name="${question.id}" value="2"><label for="${question.id}2"> 2. Eri mieltï¿½</label>
                             <br> <input type="radio" id="${question.id}3" name="${question.id}" value="3"> <label for="${question.id}3">3. Neutraali</label>
-                            <br> <input type="radio" id="${question.id}4" name="${question.id}" value="4"> <label for="${question.id}4">4. Samaa mieltä</label>
-                            <br> <input type="radio" id="${question.id}5" name="${question.id}" value="5"><label for="${question.id}5"> 5. Täysin samaa mieltä</label>
+                            <br> <input type="radio" id="${question.id}4" name="${question.id}" value="4"> <label for="${question.id}4">4. Samaa mieltï¿½</label>
+                            <br> <input type="radio" id="${question.id}5" name="${question.id}" value="5"><label for="${question.id}5"> 5. Tï¿½ysin samaa mieltï¿½</label>
                             <br><br>
 
                         </div>
@@ -81,8 +81,8 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijä">Sivun tekijä Juha Kärnä</h4>
-        <h4 class="copiright">© 2022 Juha Kärnä All rights reserved</h4>
+        <h4 class="tekijï¿½">Sivun tekijï¿½ Lauri Jokinen, Miska Luukkonen, Juha KÃ¤rnÃ¤</h4>
+        <h4 class="copiright">ï¿½ 2022 Lauri Jokinen, Miska Luukkonen, Juha KÃ¤rnÃ¤ All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 

@@ -20,6 +20,7 @@
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/form.js"></script>
     <script src="./js/navbar.js"></script>
+    <script src="./js/register.js"></script>
 </head>
 <body> 
     <div class="navbar">
@@ -29,7 +30,7 @@
                     <li><a href="index.jsp">Etusivu</a></li>
                     <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
                     <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
-                    <li><a href="register.jsp" class="active">Rekister�idy</a></li>
+                    <li><a href="register.jsp" class="active">Rekister�idy</a></li>
                     <li ><a href="">LINK5</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -48,7 +49,7 @@
                 <h1>Sign up</h1>
                 <div class="container">
                 <div class="sign-up-content">
-                <form action="/adduser" method="post" class="signup-form" name="form1" id="form1">
+                <form action="/adduser" method="post" onsubmit="return tarkasta(this)" class="signup-form" name="form1" id="form1">
                 <h2 class="form-title">What type of user are you ?</h2>
                 <div class="form-radio">
                 <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" />
@@ -91,8 +92,8 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekij�">Sivun tekij� Juha K�rn�</h4>
-        <h4 class="copiright">� 2022 Juha K�rn� All rights reserved</h4>
+        <h4 class="tekij�">Sivun tekij� Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
+        <h4 class="copiright">� 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 
