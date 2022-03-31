@@ -47,8 +47,8 @@
 </div>
 
 <body>
-
-    <h1>Vastaa kysymyksiin</h1>
+    <div class="signUp">
+    <u><h1>Vastaa kysymyksiin</h1></u>
     <br><br>
     <form method="post" action="bestCandidates">
         <c:forEach var="question" items="${sessionScope.allquestions}">
@@ -72,6 +72,7 @@
         </c:forEach>
 
         <input type="submit" value="Tallenna" class="button">
+    </div>
     </form>
 
     <div class="socialMedia">
