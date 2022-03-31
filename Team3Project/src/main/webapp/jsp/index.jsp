@@ -28,7 +28,7 @@
                     <li><a href="index.jsp" class="active">Etusivu</a></li>
                     <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
                     <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
-                    <li><a href="register.jsp">Rekisterï¿½idy</a></li>
+                    <li><a href="register.jsp">Rekisteröidy</a></li>
                     <li ><a href="">LINK5</a></li>
                     
                     
@@ -60,8 +60,8 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijï¿½">Sivun tekijï¿½ Lauri Jokinen, Miska Luukkonen, Juha KÃ¤rnÃ¤</h4>
-        <h4 class="copiright">ï¿½ 2022 Lauri Jokinen, Miska Luukkonen, Juha KÃ¤rnÃ¤ All rights reserved</h4>
+        <h4 class="tekijï¿½">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
+        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 
