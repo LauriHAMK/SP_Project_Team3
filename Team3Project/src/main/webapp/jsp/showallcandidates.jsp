@@ -84,7 +84,7 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijï¿½">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
+        <h4 class="tekijä">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
         <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä All rights reserved</h4>
         <div style="clear: both"></div>
     </div>

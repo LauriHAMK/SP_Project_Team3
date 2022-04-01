@@ -20,10 +20,4 @@ public class questions implements Serializable {
 	public void setKysymys(String kysymys) {
 		this.kysymys = kysymys;
 	}
-	
-	public String toString() {
-		return kysymys_id +". "+kysymys+"";
-	}
-
-
 }
