@@ -7,9 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import app.Candidate;
-import app.Question;
-import app.questions;
+import app.*;
 
 
 
@@ -83,49 +81,6 @@ public class dao {
 		return result;
 	}
 	
-	public ArrayList<Candidate> readAllCandidates() {
-		ArrayList<Candidate> list = new ArrayList<>();
-		try {
-			Statement stmt = conn.createStatement();
-			ResultSet RS = stmt.executeQuery("select * from ehdokkaat");
-			while (RS.next()) {
-				Candidate candidate = new Candidate();
-				candidate.setEhdokas_id(RS.getInt("ehdokas_id"));
-				candidate.setSukunimi(RS.getString("sukunimi"));
-				candidate.setEtunimi(RS.getString("etunimi"));
-				candidate.setPuolue(RS.getString("puolue"));
-				candidate.setKotipaikkakunta(RS.getString("kotipaikkakunta"));
-				candidate.setIka(RS.getInt("ika"));
-				candidate.setMiksi_eduskuntaan(RS.getString("miksi_eduskuntaan"));
-				candidate.setMita_asioita_haluat_edistaa(RS.getString("mita_asioita_haluat_edistaa"));
-				candidate.setAmmatti(RS.getString("ammatti"));
-				list.add(candidate);
-			}
-			return list;
-		} catch (SQLException e) {
-			return null;
-		}
-	}
-	public ArrayList<questions> readAllquestions() {
-		ArrayList<questions> questions=new ArrayList<>();
-		Statement stmt=null;
-		int count=0;
-		try {
-			stmt = conn.createStatement();
-			ResultSet rs=stmt.executeQuery("select * from KYSYMYKSET");
-			while (rs.next()) {
-				questions game=new questions();
-				game.setKysymys_id(rs.getInt("KYSYMYS_ID"));
-				game.setKysymys(rs.getString("KYSYMYS"));
-				questions.add(game);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return questions;
-	}
-	
 	public questions getGuestionInfo(int id) {
 		questions result = null;
 		String sql = "select * from KYSYMYKSET where KYSYMYS_ID = ?";
@@ -193,7 +148,54 @@ public class dao {
 
 		}
 	}
-
+	
+	public ArrayList<Candidate> readAllCandidates() {
+		ArrayList<Candidate> list = new ArrayList<>();
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("select * from ehdokkaat");
+			while (rs.next()) {
+				Candidate c = new Candidate();
+				c.setEhdokas_id(rs.getInt("ehdokas_id"));
+				c.setSukunimi(rs.getString("sukunimi"));
+				c.setEtunimi(rs.getString("etunimi"));
+				c.setPuolue(rs.getString("puolue"));
+				c.setKotipaikkakunta(rs.getString("kotipaikkakunta"));
+				c.setIka(rs.getInt("ika"));
+				c.setMiksi_eduskuntaan(rs.getString("miksi_eduskuntaan"));
+				c.setMita_asioita_haluat_edistaa(rs.getString("mita_asioita_haluat_edistaa"));
+				c.setAmmatti(rs.getString("ammatti"));
+				list.add(c);
+			}
+			return list;
+		} catch (SQLException e) {
+			return null;
+		}
+	}
+	
+	public Candidate readCandidate(String id) {
+		try {
+			Candidate c = null;
+			PreparedStatement ptmt = conn.prepareStatement("select * from ehdokkaat where ehdokas_id=?");
+			ptmt.setString(1, id);
+			ResultSet rs = ptmt.executeQuery();
+			while (rs.next()) {
+				c = new Candidate();
+				c.setEhdokas_id(rs.getInt("ehdokas_id"));
+				c.setSukunimi(rs.getString("sukunimi"));
+				c.setEtunimi(rs.getString("etunimi"));
+				c.setPuolue(rs.getString("puolue"));
+				c.setKotipaikkakunta(rs.getString("kotipaikkakunta"));
+				c.setIka(rs.getInt("ika"));
+				c.setMiksi_eduskuntaan(rs.getString("miksi_eduskuntaan"));
+				c.setMita_asioita_haluat_edistaa(rs.getString("mita_asioita_haluat_edistaa"));
+				c.setAmmatti(rs.getString("ammatti"));
+			}
+			return c;
+		} catch (SQLException e) {
+			return null;
+		}
+	}
 	
 	public ArrayList<Question> readAllQuestions() {
 		ArrayList<Question> list = new ArrayList<>();
@@ -201,10 +203,29 @@ public class dao {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("select * from kysymykset");
 			while (rs.next()) {
-				Question question = new Question();
-				question.setId(rs.getInt("kysymys_id"));
-				question.setQuestion(rs.getString("kysymys"));
-				list.add(question);
+				Question q = new Question();
+				q.setId(rs.getInt("kysymys_id"));
+				q.setQuestion(rs.getString("kysymys"));
+				list.add(q);
+			}
+			return list;
+		} catch (SQLException e) {
+			return null;
+		}
+	}
+	
+	public ArrayList<CandidatesAnswers> readCandidatesAnswers(int id) {
+		ArrayList<CandidatesAnswers> list = new ArrayList<>();
+		try {
+			PreparedStatement ptmt = conn.prepareStatement("select * from vastaukset where ehdokas_id=? order by kysymys_id");
+			ptmt.setInt(1, id);
+			ResultSet rs = ptmt.executeQuery();
+			while (rs.next()) {
+				CandidatesAnswers a = new CandidatesAnswers();
+				a.setEhdokas_id(rs.getInt("ehdokas_id"));
+				a.setVastaus(rs.getInt("vastaus"));
+				a.setKysymys_id(rs.getInt("kysymys_id"));
+				list.add(a);
 			}
 			return list;
 		} catch (SQLException e) {

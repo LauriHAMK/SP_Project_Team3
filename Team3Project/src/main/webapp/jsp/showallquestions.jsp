@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="jsp/style/home.css" />
-    <link rel="stylesheet" type="text/css" href="jsp/style/candinates.css" />
+    <link rel="stylesheet" type="text/css" href="jsp/style/questions.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,9 +47,10 @@
 
 <body>
 
-    <h1>Vastaa kysymyksiin</h1>
+    <div class="signUp">
+    <u><h1>Vastaa kysymyksiin</h1></u>
     <br><br>
-    <form method="post" action="bestCandidates">
+    <form method="post" action="bestcandidates">
         <c:forEach var="question" items="${sessionScope.allquestions}">
             <div class="signUp">
                 <div class="main">
@@ -71,6 +72,7 @@
         </c:forEach>
 
         <input type="submit" value="Tallenna" class="button">
+    </div>
     </form>
 
     <div class="socialMedia">
@@ -81,7 +83,7 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijï¿½">Sivun tekijä Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
+        <h4 class="tekijä">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
         <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
