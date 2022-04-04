@@ -50,7 +50,7 @@ public class AdminLogin extends HttpServlet {
 		  		
 		  		HttpSession session = request.getSession();
 		  		
-		  		session.setAttribute("LoggedUser", uname);
+		  		session.setAttribute("AdminUser", uname);
 		  		
 		  	    String newLocation = NEW_HOST;
 

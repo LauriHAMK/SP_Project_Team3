@@ -30,6 +30,21 @@
                     <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
                     <li><a href="register.jsp">Rekisteröidy</a></li>
                     <li ><a href="">LINK5</a></li>
+               
+                 <%
+        if ((request.getSession(false).getAttribute("AdminUser") == null)) {
+    %>
+       
+    <%
+        } 
+        else {
+    %>
+           <li ><a href="./yllapito.jsp">ylläpito</a></li>
+    <%
+        }
+    %>
+                    
+                 
                     
                     
             </div>
