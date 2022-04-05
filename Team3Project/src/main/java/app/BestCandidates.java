@@ -37,15 +37,9 @@ public class BestCandidates extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
-
         dao dao = new dao();
         ArrayList < Question > questions = dao.readAllQuestions();
-
-
         ArrayList < Candidate > candidates = dao.readAllCandidates();
-
-
         ArrayList < Integer > usersanswers = new ArrayList < > ();
         String answer = "";
         int answerInt = 0;
@@ -53,15 +47,12 @@ public class BestCandidates extends HttpServlet {
         for (int i = 0; i < questions.size(); i++) {
             answer = request.getParameter("" + (i + 1));
             if (answer != null) {
-
                 answerInt = Integer.valueOf(answer);
                 usersanswers.add(answerInt);
-
             } else {
                 answerInt = 3;
                 usersanswers.add(answerInt);
             }
-
         }
 
         int difference = 0;
@@ -69,19 +60,19 @@ public class BestCandidates extends HttpServlet {
         CandidatesAnswers candidatesAnswers = new CandidatesAnswers();
         ArrayList < CandidatesAnswers > candidateAnswersList = new ArrayList < > ();
 
-
         for (int i = 0; i < candidates.size(); i++) {
             differenceSum = 0;
             Candidate c = candidates.get(i);
             candidateAnswersList = dao.readCandidatesAnswers(c.getEhdokas_id());
 
             for (int ii = 0; ii < questions.size(); ii++) {
-
-
-
+            	try {
                 candidatesAnswers = candidateAnswersList.get(ii);
                 difference = usersanswers.get(ii) - candidatesAnswers.getVastaus();
                 differenceSum = differenceSum + Math.abs(difference);
+            	} catch (IndexOutOfBoundsException e) {
+            		continue;
+            	}
             }
             candidates.get(i).setPisteet(differenceSum);
         }
