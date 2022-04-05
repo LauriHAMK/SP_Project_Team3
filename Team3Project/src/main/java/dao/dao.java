@@ -111,6 +111,7 @@ public class dao {
 			
 			stmt.setInt(1, question.getKysymys_id());
 			stmt.setString(2, question.getKysymys());
+			
 			stmt.setInt(3, question.getKysymys_id());
 			
 			count = stmt.executeUpdate();
