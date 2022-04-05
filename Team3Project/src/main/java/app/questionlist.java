@@ -32,7 +32,7 @@ public class questionlist extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		dao dao = new dao();
-		ArrayList<questions> questions = dao.readAllquestions();
+		ArrayList<Question> questions = dao.readAllQuestions();
 		
 		session.setAttribute("allquestions", questions);
 		

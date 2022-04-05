@@ -36,7 +36,7 @@
             <li><a href="jsp/index.jsp">Etusivu</a></li>
             <li><a href="showcandidates">Kaikki ehdokkaat</a></li>
             <li><a href="showquestions" class="active">Vastaa kysymyksiin</a></li>
-            <li><a href="jsp/register.jsp">Rekister√∂idy</a></li>
+            <li><a href="jsp/register.jsp">Rekisterˆidy</a></li>
             <li><a href="">LINK5</a></li>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -46,21 +46,22 @@
 </div>
 
 <body>
+
     <div class="signUp">
     <u><h1>Vastaa kysymyksiin</h1></u>
     <br><br>
-    <form method="post" action="bestCandidates">
+    <form method="post" action="bestcandidates">
         <c:forEach var="question" items="${sessionScope.allquestions}">
             <div class="signUp">
                 <div class="main">
                     <div class="container">
                         <div class="sign-up-content">
                             <b>${question.id}: </b>${question.question} <br><br>
-                            <input type="radio" id="${question.id}1" name="${question.id}" value="1"><label for="${question.id}1"> 1. T√§ysin
-                                eri mielt√§</label><br> <input type="radio" id="${question.id}2" name="${question.id}" value="2"><label for="${question.id}2"> 2. Eri mielt√§</label>
+                            <input type="radio" id="${question.id}1" name="${question.id}" value="1"><label for="${question.id}1"> 1. T‰ysin
+                                eri mielt‰</label><br> <input type="radio" id="${question.id}2" name="${question.id}" value="2"><label for="${question.id}2"> 2. Eri mielt‰</label>
                             <br> <input type="radio" id="${question.id}3" name="${question.id}" value="3"> <label for="${question.id}3">3. Neutraali</label>
-                            <br> <input type="radio" id="${question.id}4" name="${question.id}" value="4"> <label for="${question.id}4">4. Samaa mielt√§</label>
-                            <br> <input type="radio" id="${question.id}5" name="${question.id}" value="5"><label for="${question.id}5"> 5. T√§ysin samaa mielt√§</label>
+                            <br> <input type="radio" id="${question.id}4" name="${question.id}" value="4"> <label for="${question.id}4">4. Samaa mielt‰</label>
+                            <br> <input type="radio" id="${question.id}5" name="${question.id}" value="5"><label for="${question.id}5"> 5. T‰ysin samaa mielt‰</label>
                             <br><br>
 
                         </div>
@@ -82,8 +83,8 @@
     </div>
 
     <div class="footer">
-        <h4 class="tekijÔøΩ">Sivun tekij√§ Lauri Jokinen, Miska Luukkonen, Juha K√§rn√§</h4>
-        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha K√§rn√§ All rights reserved</h4>
+        <h4 class="tekij‰">Sivun tekij‰t Lauri Jokinen, Miska Luukkonen, Juha K‰rn‰</h4>
+        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha K‰rn‰ All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 

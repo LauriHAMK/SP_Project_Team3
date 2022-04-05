@@ -33,7 +33,7 @@ public class logout extends HttpServlet {
 			  session = null;
 		  }
 		  
-		  response.sendRedirect("index.html");
+		  response.sendRedirect("jsp/index.jsp");
 		  
 	  }
 }
