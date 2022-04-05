@@ -59,6 +59,7 @@ public class addquestion extends HttpServlet {
 		// TODO Auto-generated method stub
 		questions question=new questions();
 		question.setKysymys(request.getParameter("kysymys"));
+		question.setKysymys_id(request.getParameter("kysymys_id"));
 		return question;
 	}
 	

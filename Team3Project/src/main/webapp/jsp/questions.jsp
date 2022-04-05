@@ -19,12 +19,12 @@
 
 <c:forEach var="questions" items="${sessionScope.allquestions}" >
 	<tr>
-		<td>${questions.kysymys_id }</td>
-		<td>${questions.kysymys }</td>
+		<td>${questions.id }</td>
+		<td>${questions.question }</td>
 		<td>
 		<br>
-			<a href="/editquestion?kysymys_id=${questions.kysymys_id }">Edit</a>
-			<a href="/deletequestion?kysymys_id=${questions.kysymys_id }">Delete</a>
+			<a href="/editquestion?kysymys_id=${questions.id }">Edit</a>
+			<a href="/deletequestion?kysymys_id=${questions.id }">Delete</a>
 		</td>
 		
 		<br>
