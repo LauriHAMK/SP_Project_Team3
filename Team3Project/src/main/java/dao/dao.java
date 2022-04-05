@@ -139,9 +139,10 @@ public class dao {
 	}
 	public void createQuestion(questions question) {
 		try {
-			String sql = "insert into KYSYMYKSET (KYSYMYS) values (?)";
+			String sql = "insert into KYSYMYKSET (KYSYMYS_ID, KYSYMYS) values (?,?)";
 			PreparedStatement preparedStmt = conn.prepareStatement(sql);
-			preparedStmt.setString(1, question.getKysymys());
+			preparedStmt.setInt(1, question.getKysymys_id());
+			preparedStmt.setString(2, question.getKysymys());
 			preparedStmt.executeUpdate();
 
 		} catch (SQLException e) {

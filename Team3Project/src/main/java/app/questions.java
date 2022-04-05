@@ -14,6 +14,14 @@ public class questions implements Serializable {
 	public void setKysymys_id(int kysymys_id) {
 		this.kysymys_id = kysymys_id;
 	}
+	public void setKysymys_id(String s) {
+		try {
+			this.kysymys_id=Integer.parseInt(s);
+		}
+		catch(NumberFormatException e) {
+			this.kysymys_id=0;
+		}
+	}
 	public String getKysymys() {
 		return kysymys;
 	}
