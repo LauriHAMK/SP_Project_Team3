@@ -5,8 +5,8 @@ public class CandidatesAnswers {
 	private int ehdokas_id;
 	private int vastaus;
 	private int kysymys_id;
-	private String ehdokasEtunimi;
-	private String ehdokasSukunimi;
+	private String etunimi;
+	private String sukunimi;
 	
 	public CandidatesAnswers(){		
 	}	
@@ -17,12 +17,12 @@ public class CandidatesAnswers {
 		this.kysymys_id = kysymys_id;		
 	}
 
-	public String getEhdokasSukunimi() {
-		return ehdokasSukunimi;
+	public String getSukunimi() {
+		return sukunimi;
 	}
 
-	public void setEhdokasSukunimi(String ehdokasSukunimi) {
-		this.ehdokasSukunimi = ehdokasSukunimi;
+	public void setSukunimi(String sukunimi) {
+		this.sukunimi = sukunimi;
 	}
 
 	public int getEhdokas_id() {
@@ -49,11 +49,11 @@ public class CandidatesAnswers {
 		this.kysymys_id = kysymys_id;
 	}
 
-	public String getEhdokasEtunimi() {
-		return ehdokasEtunimi;
+	public String getEtunimi() {
+		return etunimi;
 	}
 
-	public void setEhdokasEtunimi(String ehdokasEtunimi) {
-		this.ehdokasEtunimi = ehdokasEtunimi;
+	public void setEtunimi(String etunimi) {
+		this.etunimi = etunimi;
 	}
 }
