@@ -10,7 +10,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import dao.dao;
 
@@ -19,28 +18,12 @@ import dao.dao;
 public class BestCandidates extends HttpServlet {
 
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws IOException, ServletException {
-
-        HttpSession session = request.getSession();
-
-        dao dao = new dao();
-        ArrayList < Candidate > candidates = dao.readAllCandidates();
-
-        session.setAttribute("allcandidates", candidates);
-
-        RequestDispatcher rd = request.getRequestDispatcher("jsp/bestcandidates.jsp");
-        rd.forward(request, response);
-
-    }
-
-    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         dao dao = new dao();
-        ArrayList < Question > questions = dao.readAllQuestions();
-        ArrayList < Candidate > candidates = dao.readAllCandidates();
-        ArrayList < Integer > usersanswers = new ArrayList < > ();
+        ArrayList <Question> questions = dao.readAllQuestions();
+        ArrayList <Candidate> candidates = dao.readAllCandidates();
+        ArrayList <Integer> usersanswers = new ArrayList<>();
         String answer = "";
         int answerInt = 0;
 
@@ -58,7 +41,7 @@ public class BestCandidates extends HttpServlet {
         int difference = 0;
         int differenceSum = 0;
         CandidatesAnswers candidatesAnswers = new CandidatesAnswers();
-        ArrayList < CandidatesAnswers > candidateAnswersList = new ArrayList < > ();
+        ArrayList <CandidatesAnswers> candidateAnswersList = new ArrayList<>();
 
         for (int i = 0; i < candidates.size(); i++) {
             differenceSum = 0;

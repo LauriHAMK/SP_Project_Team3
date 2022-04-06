@@ -14,7 +14,6 @@ import javax.servlet.http.HttpSession;
 
 import app.security.SecurityUtils;
 import dao.dao;
-import app.questions;
 
 
 
@@ -39,7 +38,7 @@ public class editquestion extends HttpServlet {
 				int id = Integer.parseInt(idValue);
 				
 				dao dao = new dao();
-				questions question = dao.getGuestionInfo(id);
+				Question question = dao.getQuestionInfo(id);
 				
 				session.setAttribute("questions", question);
 				
@@ -62,7 +61,7 @@ public class editquestion extends HttpServlet {
 
 		// Create connection
 		dao dao=new dao();
-		questions question = readQuestions(request);
+		Question question = readQuestions(request);
 		
 		dao.updateQuestion(question);
 		
@@ -71,12 +70,12 @@ public class editquestion extends HttpServlet {
 		response.sendRedirect("/questionlist");
 	}
 	
-	private questions readQuestions(HttpServletRequest request) {
+	private Question readQuestions(HttpServletRequest request) {
 		// TODO Auto-generated method stub
 		
-		questions question=new questions();
-		question.setKysymys_id(Integer.parseInt(request.getParameter("kysymys_id")));
-		question.setKysymys(request.getParameter("kysymys"));
+		Question question=new Question();
+		question.setId(Integer.parseInt(request.getParameter("kysymys_id")));
+		question.setQuestion(request.getParameter("kysymys"));
 		return question;
 	}
  
