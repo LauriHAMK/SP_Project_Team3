@@ -108,7 +108,7 @@ public class dao {
 		String sql = "update KYSYMYKSET set KYSYMYS_ID = ?, KYSYMYS = ? where KYSYMYS_ID = ?";
 		try {
 			PreparedStatement stmt = conn.prepareStatement(sql);
-			
+
 			stmt.setInt(1, question.getId());
 			stmt.setString(2, question.getQuestion());
 			stmt.setInt(3, question.getId());
