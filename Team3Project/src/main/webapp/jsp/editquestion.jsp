@@ -13,7 +13,6 @@
 
 
 	<form action="./editquestion" method="post" accept-charset="UTF-8">
-	
 	ID: <input type="text" name="kysymys_id" value="${sessionScope.questions.kysymys_id}"><br>
 	Kysymys: <input type="text" name="kysymys" value="${sessionScope.questions.kysymys}"><br>
 	<input type="submit" name="ok" value="edit">

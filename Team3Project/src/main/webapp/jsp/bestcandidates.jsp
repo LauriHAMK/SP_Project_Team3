@@ -35,9 +35,9 @@
             <li class="logo"> <a class="logoA"><img class="logoImg" src="jsp/kuvat/voteIcon.png" alt="LOGO" style="height: 100%; width: 2.3vw; float: left; margin-right: 0.5vw; ">LOGO</a></li>
             <div id="menu-items">
                 <li><a href="jsp/index.jsp">Etusivu</a></li>
-                <li><a href="showcandidates" class="active">Kaikki ehdokkaat</a></li>
-                <li><a href="showquestions">Vastaa kysymyksiin</a></li>
-                <li><a href="register.jsp">Rekisteröidy</a></li>
+                <li><a href="showcandidates">Kaikki ehdokkaat</a></li>
+                <li><a href="showquestions" class="active">Vastaa kysymyksiin</a></li>
+                <li><a href="jsp/register.jsp">Rekisteröidy</a></li>
                 <li><a href="">LINK5</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">

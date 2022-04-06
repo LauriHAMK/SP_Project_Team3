@@ -38,7 +38,7 @@ public class addquestion extends HttpServlet {
 		response.setContentType("text/html");
 		
 		// Read parameters to Model
-		questions question=readQuestion(request);
+		Question question=readQuestion(request);
 	
 		// Create connection
 		dao dao=new dao();
@@ -55,10 +55,11 @@ public class addquestion extends HttpServlet {
 	}
 
 
-	private questions readQuestion(HttpServletRequest request) {
+	private Question readQuestion(HttpServletRequest request) {
 		// TODO Auto-generated method stub
-		questions question=new questions();
-		question.setKysymys(request.getParameter("kysymys"));
+		Question question=new Question();
+		question.setQuestion(request.getParameter("kysymys"));
+		question.setId(request.getParameter("kysymys_id"));
 		return question;
 	}
 	

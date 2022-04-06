@@ -9,7 +9,7 @@
 <body>
 
 	<form action="../addquestion" method="post" accept-charset="UTF-8">
-	
+	ID: <input type="text" name="kysymys_id" value=""><br>
 	Kysymys: <input type="text" name="kysymys" value=""><br>
 	<input type="submit" name="ok" value="add">
 	</form>

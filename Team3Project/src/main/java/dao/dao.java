@@ -81,8 +81,8 @@ public class dao {
 		return result;
 	}
 	
-	public questions getGuestionInfo(int id) {
-		questions result = null;
+	public Question getQuestionInfo(int id) {
+		Question result = null;
 		String sql = "select * from KYSYMYKSET where KYSYMYS_ID = ?";
 		try {
 			PreparedStatement stmt = conn.prepareStatement(sql);
@@ -92,9 +92,9 @@ public class dao {
 			ResultSet resultset = stmt.executeQuery();
 			
 			if (resultset.next()) {
-				result = new questions();
-				result.setKysymys_id(resultset.getInt("KYSYMYS_ID"));
-				result.setKysymys(resultset.getString("KYSYMYS"));
+				result = new Question();
+				result.setId(resultset.getInt("KYSYMYS_ID"));
+				result.setQuestion(resultset.getString("KYSYMYS"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -103,16 +103,15 @@ public class dao {
 		return result;
 	}
 	
-	public int updateQuestion(questions question) {
+	public int updateQuestion(Question question) {
 		int count = 0;
 		String sql = "update KYSYMYKSET set KYSYMYS_ID = ?, KYSYMYS = ? where KYSYMYS_ID = ?";
 		try {
 			PreparedStatement stmt = conn.prepareStatement(sql);
-			
-			stmt.setInt(1, question.getKysymys_id());
-			stmt.setString(2, question.getKysymys());
-			
-			stmt.setInt(3, question.getKysymys_id());
+
+			stmt.setInt(1, question.getId());
+			stmt.setString(2, question.getQuestion());
+			stmt.setInt(3, question.getId());
 			
 			count = stmt.executeUpdate();
 		} catch (SQLException e) {
@@ -122,13 +121,13 @@ public class dao {
 		return count;
 	}
 	
-	public int deleteQuestion(questions question) {
+	public int deleteQuestion(Question question) {
 		int count = 0;
 		String sql = "DELETE FROM KYSYMYKSET WHERE KYSYMYS_ID = ?";
 		try {
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			
-			stmt.setInt(1, question.getKysymys_id());
+			stmt.setInt(1, question.getId());
 
 			
 			count = stmt.executeUpdate();
@@ -138,11 +137,12 @@ public class dao {
 		}
 		return count;
 	}
-	public void createQuestion(questions question) {
+	public void createQuestion(Question question) {
 		try {
-			String sql = "insert into KYSYMYKSET (KYSYMYS) values (?)";
+			String sql = "insert into KYSYMYKSET (KYSYMYS_ID, KYSYMYS) values (?,?)";
 			PreparedStatement preparedStmt = conn.prepareStatement(sql);
-			preparedStmt.setString(1, question.getKysymys());
+			preparedStmt.setInt(1, question.getId());
+			preparedStmt.setString(2, question.getQuestion());
 			preparedStmt.executeUpdate();
 
 		} catch (SQLException e) {
