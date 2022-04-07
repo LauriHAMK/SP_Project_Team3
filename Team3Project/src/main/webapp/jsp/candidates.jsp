@@ -13,7 +13,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<a href="jsp/yllapito.jsp">Ylläpito</a> <br> <br>
 <a href="jsp/addcandidate.jsp">Add Candidate</a> 
+
+
 
 <c:forEach var="candidate" items="${sessionScope.candidates}" >
 	<tr>

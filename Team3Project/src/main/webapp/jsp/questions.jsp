@@ -13,7 +13,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<a href="jsp/yllapito.jsp">Ylläpito</a> <br> <br>
 <a href="jsp/addquestion.jsp">Add Question</a> 
 <br><br>
 
