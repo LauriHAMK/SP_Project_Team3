@@ -304,6 +304,29 @@ public class dao {
 		}
 		return count;
 	}
+	public void createCandidate(Candidate candidate) {
+		{
+			try {
+				String sql = "insert into ehdokkaat (ehdokas_id, sukunimi, etunimi, puolue, kotipaikkakunta, ika, miksi_eduskuntaan, mita_asioita_haluat_edistaa, ammatti) values (?,?,?,?,?,?,?,?,?)";
+				PreparedStatement preparedStmt = conn.prepareStatement(sql);
+				preparedStmt.setInt(1, candidate.getEhdokas_id());
+				preparedStmt.setString(2, candidate.getSukunimi());
+				preparedStmt.setString(3, candidate.getEtunimi());
+				preparedStmt.setString(4, candidate.getPuolue());
+				preparedStmt.setString(5, candidate.getKotipaikkakunta());
+				preparedStmt.setInt(6, candidate.getIka());
+				preparedStmt.setString(7, candidate.getMiksi_eduskuntaan());
+				preparedStmt.setString(8, candidate.getMita_asioita_haluat_edistaa());
+				preparedStmt.setString(9, candidate.getAmmatti());
+				
+				preparedStmt.executeUpdate();
+
+			} catch (SQLException e) {
+
+			}
+		}
+		
+	}
 		
 	
 }
