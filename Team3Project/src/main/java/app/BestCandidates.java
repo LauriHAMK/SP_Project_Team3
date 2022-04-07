@@ -47,17 +47,21 @@ public class BestCandidates extends HttpServlet {
             differenceSum = 0;
             Candidate c = candidates.get(i);
             candidateAnswersList = dao.readCandidatesAnswers(c.getEhdokas_id());
-
-            for (int ii = 0; ii < questions.size(); ii++) {
-            	try {
-                candidatesAnswers = candidateAnswersList.get(ii);
-                difference = usersanswers.get(ii) - candidatesAnswers.getVastaus();
-                differenceSum = differenceSum + Math.abs(difference);
-            	} catch (IndexOutOfBoundsException e) {
-            		continue;
-            	}
+            
+            if (candidateAnswersList.size() != 0) {
+            	for (int ii = 0; ii < questions.size(); ii++) {
+            		try {
+            		candidatesAnswers = candidateAnswersList.get(ii);
+                	difference = usersanswers.get(ii) - candidatesAnswers.getVastaus();
+                	differenceSum = differenceSum + Math.abs(difference);
+            		} catch (IndexOutOfBoundsException e) {
+            			continue;
+            		}
+            	}            
+            	candidates.get(i).setPisteet(differenceSum);
+            } else {
+            	candidates.get(i).setPisteet(100);
             }
-            candidates.get(i).setPisteet(differenceSum);
         }
 
         Collections.sort(candidates);
