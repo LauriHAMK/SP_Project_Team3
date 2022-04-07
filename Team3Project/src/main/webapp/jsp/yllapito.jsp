@@ -34,6 +34,10 @@ if((request.getSession(false).getAttribute("AdminUser")== null) )
         <td><a href='/questionlist'>Question Options</a></td>
       </tr>
       
+       <tr>
+        <td><a href='/candidatelist'>Candidate Options</a></td>
+      </tr>
+      
       <tr>
       <td><a href='./index.jsp'>Another Home Button</a></td>
       </tr>
