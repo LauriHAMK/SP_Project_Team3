@@ -1,6 +1,8 @@
 package app;
 
-public class Candidate implements Comparable<Candidate>{
+import java.io.Serializable;
+
+public class Candidate implements Serializable, Comparable<Candidate>{
 	
 	private int ehdokas_id;
 	private String sukunimi;

@@ -1,6 +1,8 @@
 package app;
 
-public class Question {
+import java.io.Serializable;
+
+public class Question implements Serializable {
 	private int id;
 	private String question;
 	

@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="app.questions" %> 
+<%@ page import="app.*" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +13,8 @@
 
 
 	<form action="./editquestion" method="post" accept-charset="UTF-8">
-	ID: <input type="text" name="kysymys_id" value="${sessionScope.questions.kysymys_id}"><br>
-	Kysymys: <input type="text" name="kysymys" value="${sessionScope.questions.kysymys}"><br>
+	ID: <input type="text" name="kysymys_id" value="${sessionScope.questions.id}"><br>
+	Kysymys: <input type="text" name="kysymys" value="${sessionScope.questions.question}"><br>
 	<input type="submit" name="ok" value="edit">
 	</form>
 </body>
