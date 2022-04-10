@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="author" content="Juha Kärnä">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +30,6 @@
                     <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
                     <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
                     <li><a href="register.jsp">Rekisteröidy</a></li>
-                    <li ><a href="">LINK5</a></li>
                
                  <%
         if ((request.getSession(false).getAttribute("AdminUser") == null)) {

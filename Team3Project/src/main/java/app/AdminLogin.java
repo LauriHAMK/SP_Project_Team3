@@ -14,6 +14,10 @@ import javax.servlet.http.HttpSession;
 import app.security.SecurityUtils;
 import dao.dao;
 
+/**
+ * @author Lauri
+ */
+
 @WebServlet(
     name = "AdminLogin",
     urlPatterns = {"/adminlogin"}

@@ -9,7 +9,9 @@ import java.util.ArrayList;
 
 import app.*;
 
-
+/**
+ * @author Miska, Lauri
+ */
 
 public class dao {
 	private static Connection conn;

@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.dao;
 
+/**
+ * @author Miska
+ */
 
 @WebServlet("/bestcandidates")
 public class BestCandidates extends HttpServlet {

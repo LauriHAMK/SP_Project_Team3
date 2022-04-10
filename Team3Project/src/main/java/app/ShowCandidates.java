@@ -2,7 +2,6 @@ package app;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.dao;
+
+/**
+ * @author Miska
+ */
 
 @WebServlet("/showcandidates")
 public class ShowCandidates extends HttpServlet {

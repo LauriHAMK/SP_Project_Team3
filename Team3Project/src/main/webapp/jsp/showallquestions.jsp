@@ -12,6 +12,7 @@
 <html>
 
 <head>
+	<meta name="author" content="Miska Luukkonen">
     <meta charset="ISO-8859-1">
     <title>Insert title here</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +38,6 @@
             <li><a href="showcandidates">Kaikki ehdokkaat</a></li>
             <li><a href="showquestions" class="active">Vastaa kysymyksiin</a></li>
             <li><a href="jsp/register.jsp">Rekisteröidy</a></li>
-            <li><a href="">LINK5</a></li>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i id="showhide" class="fa fa-bars" onclick="changeclass();"></i>

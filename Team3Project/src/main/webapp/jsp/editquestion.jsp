@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="author" content="Lauri Jokinen">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>

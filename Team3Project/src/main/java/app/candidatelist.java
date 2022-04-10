@@ -15,6 +15,7 @@ import dao.dao;
 
 
 /*
+ * @author Lauri
  * The name of the servlet is AddGame
  * and the servlet's URI (url-pattern) is 'addgame'
  */

@@ -2,6 +2,10 @@ package app;
 
 import java.io.Serializable;
 
+/**
+ * @author Miska
+ */
+
 public class Question implements Serializable {
 	private int id;
 	private String question;

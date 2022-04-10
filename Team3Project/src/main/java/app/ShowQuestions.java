@@ -14,6 +14,9 @@ import javax.servlet.http.HttpSession;
 import app.Question;
 import dao.dao;
 
+/**
+ * @author Miska
+ */
 
 @WebServlet("/showquestions")
 public class ShowQuestions extends HttpServlet {

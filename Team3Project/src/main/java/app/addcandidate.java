@@ -17,7 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.dao;
 
-
+/**
+ * @author Lauri
+ */
 
 @WebServlet(
 		name = "addcandidate",
