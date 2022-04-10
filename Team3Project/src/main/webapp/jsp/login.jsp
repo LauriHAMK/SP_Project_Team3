@@ -49,21 +49,21 @@
                 <div class="container">
                 <div class="sign-up-content">
                <form action="/adminlogin" method="post">
-               <h2 class="form-title">What type of user are you ?</h2>
+               <h2 class="form-title">Kirjaudu sisään</h2>
                 <div class="form-radio">
-<!--                 <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" /> -->
-<!--                 <label for="newbie">User</label> -->
-<!--                 <input type="radio" name="member_level" value="average" id="average" /> -->
-<!--                 <label for="average">Candinate</label> -->
-                <input type="radio" name="member_level" value="master" id="master" />
+                <!--<input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" />
+                <label for="newbie">User</label>
+                <input type="radio" name="member_level" value="average" id="average" />
+                <label for="average">Candidate</label>-->
+                <input type="radio" name="member_level" value="master" id="master" checked="checked" />
                 <label for="master">Admin</label>
                 </div>
 						    <div class="form-textbox">
-               				<label for="name">Username:</label>
+               				<label for="name">Käyttäjänimi:</label>
                				<input type="text" name="username" id="name" />
                 			</div>
 						    <div class="form-textbox">
-                			<label for="pass">Password:</label>
+                			<label for="pass">Salasana:</label>
                 			<input type="password" name="password" id="pass" />
                 			</div>
 				
@@ -72,11 +72,11 @@
                 <label for="agree-term" class="label-agree-term" style="color: white;"><span><span></span></span>I agree all statements in <a href="#" class="term-service">Terms of service</a></label>
                 </div>
                 <div class="form-textbox">
-                <input type="submit" name="submit" id="submit" class="submit" value="Log In" />
+                <input type="submit" name="submit" id="submit" class="submit" value="Kirjaudu sisään" />
                 </div>
                 </form>
                 <p class="loginhere" style="color: white;">
-                Dont have Account ?<a href="register.jsp" class="loginhere-link"> Sign up</a>
+                Eikö sinulla ole käyttäjää ?<a href="register.jsp" class="loginhere-link"> Rekisteröidy</a>
                 </p>
                 </div>
                 </div>
@@ -88,12 +88,11 @@
         <a href="#" class="fa fa-facebook" style="margin-left: 4.5%;"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-linkedin"></a>
-        <p style="float:right;color:white;font-size:1.4vh; padding-right:10%;margin-top:0; "><b>Contact Us</b> <br> Oma nimi <br> <a class="email" href="">emal.email@email.com </a></p>
     </div>
 
     <div class="footer">
         <h4 class="tekijï¿½">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
-        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä¤ All rights reserved</h4>
+        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 

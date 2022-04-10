@@ -29,7 +29,7 @@
                     <li><a href="index.jsp" class="active">Etusivu</a></li>
                     <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
                     <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
-                    <li><a href="register.jsp">RekisterÃ¶idy</a></li>
+                    <li><a href="register.jsp">Rekisteröidy</a></li>
                
                  <%
         if ((request.getSession(false).getAttribute("AdminUser") == null)) {
@@ -39,7 +39,7 @@
         } 
         else {
     %>
-           <li ><a href="./yllapito.jsp">yllÃ¤pito</a></li>
+           <li ><a href="./yllapito.jsp">ylläpito</a></li>
     <%
         }
     %>
@@ -59,11 +59,11 @@
     <div class="row">
         <div class="intro">
             <img src="./kuvat/pplWithVote.jfif" style="margin-left:8%; float:left; width:20%; height:100%;">
-            <p class="introText">Tervetuloa vaali sivullemme <br> menusta lÃ¶ydÃ¤t rekisterÃ¶inti formin <br> <br>Kaikki ehdokkaat kohdasta lÃ¶ydÃ¤t kaikki ehdokkaat ja vastaa kysymyksiin kohdasta pÃ¤Ã¤set vastailemaan kysymyksiin joiden avulla tiedÃ¤mme kuka on juuri sinulle paras ehdokas. </p>
+            <p class="introText">Tervetuloa vaali sivullemme <br> menusta löydät rekisteröinti formin <br> <br>Kaikki ehdokkaat kohdasta löydät kaikki ehdokkaat ja vastaa kysymyksiin kohdasta pääset vastailemaan kysymyksiin joiden avulla tiedämme kuka on juuri sinulle paras ehdokas. </p>
          </div>
         <div class="hull">
             <img src="./kuvat/voteCounts.png" style="margin-right:10%; float:right; width:20%; height:100%;">
-            <p class="hullText" >Sivumme tarkoitus on kysyÃ¤ sinulta kysymyksiÃ¤ ehdokkaista ja niiden avulla nÃ¤yttÃ¤Ã¤ juuri sinulle parhaan ehdokkaan. </p>
+            <p class="hullText" >Sivumme tarkoitus on kysyä sinulta kysymyksiä ehdokkaista ja niiden avulla näyttää juuri sinulle parhaan ehdokkaan. </p>
          </div>
     </div>
 
@@ -71,12 +71,11 @@
         <a href="#" class="fa fa-facebook" style="margin-left: 4.5%;"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-linkedin"></a>
-        <p style="float:right;color:white;font-size:1.4vh; padding-right:10%;margin-top:0; "><b>Contact Us</b> <br> Oma nimi <br> <a class="email" href="">emal.email@email.com </a></p>
     </div>
 
     <div class="footer">
-        <h4 class="tekijï¿½">Sivun tekijï¿½t Lauri Jokinen, Miska Luukkonen, Juha Kï¿½rnï¿½</h4>
-        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kï¿½rnï¿½ All rights reserved</h4>
+        <h4 class="tekijï¿½">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
+        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 

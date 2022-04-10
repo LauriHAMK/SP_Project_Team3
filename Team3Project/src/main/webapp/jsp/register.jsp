@@ -50,21 +50,21 @@
                 <div class="container">
                 <div class="sign-up-content">
                 <form action="/adduser" method="post" onsubmit="return tarkasta(this)" class="signup-form" name="form1" id="form1">
-                <h2 class="form-title">What type of user are you ?</h2>
+                <h2 class="form-title">Rekisteröidy</h2>
                 <div class="form-radio">
-                <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" />
+                <!--<input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" />
                 <label for="newbie">User</label>
                 <input type="radio" name="member_level" value="average" id="average" />
-                <label for="average">Candinate</label>
-                <input type="radio" name="member_level" value="master" id="master" />
+                <label for="average">Candidate</label>-->
+                <input type="radio" name="member_level" value="master" id="master" checked="checked" />
                 <label for="master">Admin</label>
                 </div>
                 <div class="form-textbox">
-                <label for="name">Username:</label>
+                <label for="name">Käyttäjänimi:</label>
                 <input type="text" name="username" id="name" />
                 </div>
                 <div class="form-textbox">
-                <label for="pass">Password:</label>
+                <label for="pass">Salasana:</label>
                 <input type="password" name="password" id="pass" />
                 </div>
                 <div class="form-group">
@@ -72,11 +72,11 @@
                 <label for="agree-term" class="label-agree-term" style="color: white;"><span><span></span></span>I agree all statements in <a href="#" class="term-service">Terms of service</a></label>
                 </div>
                 <div class="form-textbox">
-                <input type="submit" name="submit" id="submit" class="submit" value="Create account" />
+                <input type="submit" name="submit" id="submit" class="submit" value="Luo käyttäjä" />
                 </div>
                 </form>
                 <p class="loginhere" style="color: white;">
-                Already have an account ?<a href="login.jsp" class="loginhere-link"> Log in</a>
+                Onko sinulla jo käyttäjä ?<br><a href="login.jsp" class="loginhere-link"> Kirjaudu sisään</a>
                 </p>
                 </div>
                 </div>
@@ -88,7 +88,6 @@
         <a href="#" class="fa fa-facebook" style="margin-left: 4.5%;"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-linkedin"></a>
-        <p style="float:right;color:white;font-size:1.4vh; padding-right:10%;margin-top:0; "><b>Contact Us</b> <br> Oma nimi <br> <a class="email" href="">emal.email@email.com </a></p>
     </div>
 
     <div class="footer">
