@@ -9,6 +9,14 @@
 <meta name="author" content="Lauri Jokinen">
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<% //In case, if Admin session is not set, redirect to Login page
+if((request.getSession(false).getAttribute("AdminUser")== null) )
+{
+%>
+<jsp:forward page="/jsp/login.jsp"></jsp:forward>
+<%} %>
+
 </head>
 <body>
 
