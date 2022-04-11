@@ -8,6 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rekisteröidy</title>
+    <% //In case, if Admin session is not set, redirect to Login page
+if((request.getSession(false).getAttribute("AdminUser")== null) )
+{
+%>
+<jsp:forward page="/jsp/login.jsp"></jsp:forward>
+<%} %>
     <link rel="stylesheet" type="text/css" href="./style/home.css"/>
     <link rel="stylesheet" type="text/css" href="./style/register.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,7 +37,7 @@
                     <li><a href="index.jsp">Etusivu</a></li>
                     <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
                     <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
-                    <li><a href="register.jsp" class="active">Rekisteröidy</a></li>
+                      <li><a href="jsp/login.jsp">Kirjaudu sisään</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i id="showhide" class="fa fa-bars" onclick="changeclass();"></i>

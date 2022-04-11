@@ -30,7 +30,7 @@
                     <li><a href="index.jsp">Etusivu</a></li>
                     <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
                     <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
-                    <li><a href="register.jsp" class="active">Rekisteröidy</a></li>
+                      <li><a href="jsp/login.jsp">Kirjaudu sisään</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i id="showhide" class="fa fa-bars" onclick="changeclass();"></i>
@@ -48,7 +48,7 @@
                 <h1>Log In</h1>
                 <div class="container">
                 <div class="sign-up-content">
-               <form action="/adminlogin" method="post">
+               <form action="/adminlogin" method="post" accept-charset="UTF-8">
                <h2 class="form-title">Kirjaudu sisään</h2>
                 <div class="form-radio">
                 <!--<input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" />
@@ -75,9 +75,6 @@
                 <input type="submit" name="submit" id="submit" class="submit" value="Kirjaudu sisään" />
                 </div>
                 </form>
-                <p class="loginhere" style="color: white;">
-                Eikö sinulla ole käyttäjää ?<a href="register.jsp" class="loginhere-link"> Rekisteröidy</a>
-                </p>
                 </div>
                 </div>
                 </div>

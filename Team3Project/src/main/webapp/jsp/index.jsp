@@ -24,12 +24,12 @@
 <body> 
     <div class="navbar">
         <ul>
-            <li class="logo"> <a class="logoA"><img class="logoImg" src="./kuvat/voteIcon.png" alt="LOGO" style="height: 100%; width: 2.3vw; float: left; margin-right: 0.5vw; ">LOGO</a></li>
+            <li class="logo"> <a class="logoA"><img class="logoImg" src="./kuvat/voteIcon.png" alt="LOGO" style="height: 100%; width: 2.3vw; float: left; margin-right: 0.5vw; ">Vaalikone</a></li>
             <div id="menu-items">
                     <li><a href="index.jsp" class="active">Etusivu</a></li>
                     <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
                     <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
-                    <li><a href="register.jsp">Rekisteröidy</a></li>
+                    <li><a href="login.jsp">Kirjaudu sisään</a></li>
                
                  <%
         if ((request.getSession(false).getAttribute("AdminUser") == null)) {
