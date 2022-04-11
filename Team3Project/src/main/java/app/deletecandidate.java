@@ -19,8 +19,6 @@ import dao.dao;
 
 /*
  * @author Lauri
- * The name of the servlet is AddGame
- * and the servlet's URI (url-pattern) is 'addgame'
  */
 @WebServlet(
     name = "deletecandidate",
@@ -31,7 +29,8 @@ public class deletecandidate extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws IOException, ServletException {
 		HttpSession session = request.getSession();
-		
+		if( request.getSession().getAttribute("AdminUser") != null)
+		{
 		String idValue = request.getParameter("ehdokas_id");
 		
 		if ( idValue != null) {
@@ -51,7 +50,7 @@ public class deletecandidate extends HttpServlet {
 				e.printStackTrace();
 			}
 			
-		} else {
+		}} else {
 			response.sendRedirect("/candidatelist");
 		}
 	
@@ -69,7 +68,7 @@ public class deletecandidate extends HttpServlet {
 		
 		dao.close();
 		
-		response.sendRedirect("/questionlist");
+		response.sendRedirect("/candidatelist");
 	
 	}
 	
