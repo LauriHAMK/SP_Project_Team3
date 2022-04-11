@@ -59,7 +59,7 @@
     <div class="row">
         <div class="intro">
             <img src="./kuvat/pplWithVote.jfif" style="margin-left:8%; float:left; width:20%; height:100%;">
-            <p class="introText">Tervetuloa vaali sivullemme <br> menusta löydät rekisteröinti formin <br> <br>Kaikki ehdokkaat kohdasta löydät kaikki ehdokkaat ja vastaa kysymyksiin kohdasta pääset vastailemaan kysymyksiin joiden avulla tiedämme kuka on juuri sinulle paras ehdokas. </p>
+            <p class="introText">Tervetuloa vaali sivullemme <br> <br> <br>Kaikki ehdokkaat kohdasta löydät kaikki ehdokkaat ja vastaa kysymyksiin kohdasta pääset vastailemaan kysymyksiin joiden avulla tiedämme kuka on juuri sinulle paras ehdokas. </p>
          </div>
         <div class="hull">
             <img src="./kuvat/voteCounts.png" style="margin-right:10%; float:right; width:20%; height:100%;">
