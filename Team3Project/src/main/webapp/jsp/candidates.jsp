@@ -9,11 +9,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="author" content="Lauri Jokinen">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+
+<% //In case, if Admin session is not set, redirect to Login page
+if((request.getSession(false).getAttribute("AdminUser")== null) )
+{
+%>
+<jsp:forward page="/jsp/login.jsp"></jsp:forward>
+<%} %>
+
+
 </head>
 <body>
+<a href="jsp/yllapito.jsp">Ylläpito</a> <br> <br>
 <a href="jsp/addcandidate.jsp">Add Candidate</a> 
+
+
 
 <c:forEach var="candidate" items="${sessionScope.candidates}" >
 	<tr>

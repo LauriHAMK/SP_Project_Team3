@@ -2,6 +2,10 @@ package app;
 
 import java.io.Serializable;
 
+/**
+ * @author Miska
+ */
+
 public class Candidate implements Serializable, Comparable<Candidate>{
 	
 	private int ehdokas_id;

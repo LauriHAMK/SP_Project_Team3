@@ -3,10 +3,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="author" content="Lauri Jokinen">	
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>voting site</title>
+    <title>Kirjaudu</title>
     <link rel="stylesheet" type="text/css" href="./style/home.css"/>
     <link rel="stylesheet" type="text/css" href="./style/register.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,8 +30,7 @@
                     <li><a href="index.jsp">Etusivu</a></li>
                     <li><a href="/showcandidates">Kaikki ehdokkaat</a></li>
                     <li><a href="/showquestions">Vastaa kysymyksiin</a></li>
-                    <li><a href="register.jsp" class="active">Rekisteröidy</a></li>
-                    <li ><a href="">LINK5</a></li>
+                      <li><a href="jsp/login.jsp">Kirjaudu sisään</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i id="showhide" class="fa fa-bars" onclick="changeclass();"></i>
@@ -48,22 +48,22 @@
                 <h1>Log In</h1>
                 <div class="container">
                 <div class="sign-up-content">
-               <form action="/adminlogin" method="post">
-               <h2 class="form-title">What type of user are you ?</h2>
+               <form action="/adminlogin" method="post" accept-charset="UTF-8">
+               <h2 class="form-title">Kirjaudu sisään</h2>
                 <div class="form-radio">
-<!--                 <input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" /> -->
-<!--                 <label for="newbie">User</label> -->
-<!--                 <input type="radio" name="member_level" value="average" id="average" /> -->
-<!--                 <label for="average">Candinate</label> -->
-                <input type="radio" name="member_level" value="master" id="master" />
+                <!--<input type="radio" name="member_level" value="newbie" id="newbie" checked="checked" />
+                <label for="newbie">User</label>
+                <input type="radio" name="member_level" value="average" id="average" />
+                <label for="average">Candidate</label>-->
+                <input type="radio" name="member_level" value="master" id="master" checked="checked" />
                 <label for="master">Admin</label>
                 </div>
 						    <div class="form-textbox">
-               				<label for="name">Username:</label>
+               				<label for="name">Käyttäjänimi:</label>
                				<input type="text" name="username" id="name" />
                 			</div>
 						    <div class="form-textbox">
-                			<label for="pass">Password:</label>
+                			<label for="pass">Salasana:</label>
                 			<input type="password" name="password" id="pass" />
                 			</div>
 				
@@ -72,12 +72,9 @@
                 <label for="agree-term" class="label-agree-term" style="color: white;"><span><span></span></span>I agree all statements in <a href="#" class="term-service">Terms of service</a></label>
                 </div>
                 <div class="form-textbox">
-                <input type="submit" name="submit" id="submit" class="submit" value="Log In" />
+                <input type="submit" name="submit" id="submit" class="submit" value="Kirjaudu sisään" />
                 </div>
                 </form>
-                <p class="loginhere" style="color: white;">
-                Dont have Account ?<a href="register.jsp" class="loginhere-link"> Sign up</a>
-                </p>
                 </div>
                 </div>
                 </div>
@@ -88,12 +85,11 @@
         <a href="#" class="fa fa-facebook" style="margin-left: 4.5%;"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-linkedin"></a>
-        <p style="float:right;color:white;font-size:1.4vh; padding-right:10%;margin-top:0; "><b>Contact Us</b> <br> Oma nimi <br> <a class="email" href="">emal.email@email.com </a></p>
     </div>
 
     <div class="footer">
         <h4 class="tekijï¿½">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
-        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä¤ All rights reserved</h4>
+        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä All rights reserved</h4>
         <div style="clear: both"></div>
     </div>
 

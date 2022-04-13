@@ -10,9 +10,10 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="ISO-8859-1">
-    <title>Best candidates</title>
+<head>	
+	<meta name="author" content="Miska Luukkonen">
+	<meta charset="ISO-8859-1">
+    <title>Sinulle suositellut ehdokkaat</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="jsp/style/home.css" />
@@ -37,8 +38,7 @@
                 <li><a href="jsp/index.jsp">Etusivu</a></li>
                 <li><a href="showcandidates">Kaikki ehdokkaat</a></li>
                 <li><a href="showquestions" class="active">Vastaa kysymyksiin</a></li>
-                <li><a href="jsp/register.jsp">Rekisteröidy</a></li>
-                <li><a href="">LINK5</a></li>
+                <li><a href="jsp/login.jsp">Kirjaudu sisään</a></li>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i id="showhide" class="fa fa-bars" onclick="changeclass();"></i>
@@ -81,17 +81,16 @@
         </c:forEach>
 
         <div class="socialMedia">
-            <a href="#" class="fa fa-facebook" style="margin-left: 4.5%;"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-linkedin"></a>
-            <p style="float:right;color:white;font-size:1.4vh; padding-right:10%;margin-top:0; "><b>Contact Us</b> <br> Oma nimi <br> <a class="email" href="">emal.email@email.com </a></p>
-        </div>
+        <a href="#" class="fa fa-facebook" style="margin-left: 4.5%;"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+    </div>
 
-        <div class="footer">
-            <h4 class="tekijä">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
-        	<h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä All rights reserved</h4>
-            <div style="clear: both"></div>
-        </div>
+    <div class="footer">
+        <h4 class="tekijï¿½">Sivun tekijät Lauri Jokinen, Miska Luukkonen, Juha Kärnä</h4>
+        <h4 class="copiright">@ 2022 Lauri Jokinen, Miska Luukkonen, Juha Kärnä All rights reserved</h4>
+        <div style="clear: both"></div>
+    </div>
 
 </body>
 

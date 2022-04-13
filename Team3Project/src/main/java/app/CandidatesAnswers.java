@@ -1,5 +1,9 @@
 package app;
 
+/**
+ * @author Miska
+ */
+
 public class CandidatesAnswers {
 	
 	private int ehdokas_id;
